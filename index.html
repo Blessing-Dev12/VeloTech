@@ -3,57 +3,492 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VeloTech</title>
+<title>VeloTech Marketplace</title>
 
-style.css
+https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f7fa;
+color:#222;
+}
+
+/* HEADER */
+
+header{
+background:white;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 15px rgba(0,0,0,0.08);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+color:#0086ff;
+}
+
+.search{
+display:flex;
+width:50%;
+}
+
+.search input{
+flex:1;
+padding:12px;
+border:2px solid #e5e5e5;
+border-radius:10px 0 0 10px;
+outline:none;
+}
+
+.search button{
+padding:12px 20px;
+border:none;
+background:#0086ff;
+color:white;
+cursor:pointer;
+border-radius:0 10px 10px 0;
+}
+
+.icons{
+display:flex;
+gap:20px;
+font-size:24px;
+}
+
+/* NAVIGATION */
+
+nav{
+background:#0086ff;
+padding:12px;
+display:flex;
+justify-content:center;
+gap:30px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:500;
+}
+
+/* HERO */
+
+.hero{
+height:500px;
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2000');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding-left:80px;
+color:white;
+}
+
+.hero-content h1{
+font-size:60px;
+margin-bottom:15px;
+}
+
+.hero-content p{
+font-size:22px;
+margin-bottom:20px;
+}
+
+.hero button{
+padding:15px 35px;
+background:#0086ff;
+border:none;
+border-radius:10px;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+/* CATEGORIES */
+
+.section-title{
+padding:40px;
+font-size:32px;
+font-weight:700;
+}
+
+.categories{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+padding:0 40px 40px;
+}
+
+.category{
+background:white;
+padding:30px;
+text-align:center;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.05);
+transition:.3s;
+}
+
+.category:hover{
+transform:translateY(-8px);
+background:#0086ff;
+color:white;
+}
+
+.category span{
+font-size:50px;
+display:block;
+margin-bottom:10px;
+}
+
+/* PRODUCTS */
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+padding:0 40px 50px;
+}
+
+.product{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.product:hover{
+transform:translateY(-8px);
+}
+
+.product img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.product-info{
+padding:15px;
+}
+
+.product h3{
+margin-bottom:10px;
+}
+
+.price{
+margin:10px 0;
+}
+
+.new-price{
+font-size:22px;
+font-weight:bold;
+color:#0086ff;
+}
+
+.old-price{
+text-decoration:line-through;
+color:gray;
+margin-left:10px;
+}
+
+.rating{
+color:orange;
+margin-bottom:10px;
+}
+
+.product button{
+width:100%;
+padding:12px;
+border:none;
+background:#0086ff;
+color:white;
+border-radius:8px;
+cursor:pointer;
+}
+
+/* NEWSLETTER */
+
+.newsletter{
+background:#0c1c36;
+padding:70px 20px;
+text-align:center;
+color:white;
+}
+
+.newsletter h2{
+font-size:38px;
+margin-bottom:15px;
+}
+
+.newsletter input{
+width:350px;
+max-width:90%;
+padding:14px;
+border:none;
+border-radius:10px;
+margin-top:20px;
+}
+
+.newsletter button{
+padding:14px 25px;
+background:#0086ff;
+border:none;
+color:white;
+border-radius:10px;
+margin-left:10px;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+background:#111827;
+color:white;
+padding:40px;
+margin-top:50px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+
+.footer-grid h3{
+margin-bottom:15px;
+}
+
+.footer-grid p,
+.footer-grid a{
+color:#ccc;
+text-decoration:none;
+display:block;
+margin-bottom:8px;
+}
+
+.copyright{
+text-align:center;
+margin-top:30px;
+color:#aaa;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:15px;
+}
+
+.search{
+width:100%;
+}
+
+.hero{
+padding:30px;
+height:400px;
+}
+
+.hero-content h1{
+font-size:38px;
+}
+
+nav{
+flex-wrap:wrap;
+}
+
+}
+
+</style>
 </head>
+
 <body>
 
 <header>
-    <div class="logo">VeloTech</div>
 
-    <input type="text" placeholder="Search products...">
+<div class="logo">VeloTech</div>
 
-    <nav>
-        #Home</a>
-        #Categories</a>
-        #Deals</a>
-        #Cart</a>
-    </nav>
+<div class="search">
+<input type="text" placeholder="Search products...">
+<button>Search</button>
+</div>
+
+<div class="icons">
+<span>❤️</span>
+<span>🛒</span>
+<span>👤</span>
+</div>
+
 </header>
 
+<nav>
+#Deals</a>
+#Electronics</a>
+<a href</a>
+<a hrefers</a>
+#Phones</a>
+<a hrefories</a>
+</nav>
+
 <section class="hero">
-    <h1>Technology at Great Prices</h1>
-    <p>Shop the latest electronics and gadgets.</p>
+<div class="hero-content">
+<h1>Tech Deals Every Day</h1>
+<p>Your marketplace for electronics, gadgets and gaming gear.</p>
+<button>Shop Now</button>
+</div>
 </section>
+
+<h2 class="section-title">Shop By Category</h2>
+
+<section class="categories">
+
+<div class="category">
+<span>📱</span>
+<h3>Phones</h3>
+</div>
+
+<div class="category">
+<span>💻</span>
+<h3>Laptops</h3>
+</div>
+
+<div class="category">
+<span>🎮</span>
+<h3>Gaming</h3>
+</div>
+
+<div class="category">
+<span>🎧</span>
+<h3>Audio</h3>
+</div>
+
+<div class="category">
+<span>⌚</span>
+<h3>Wearables</h3>
+</div>
+
+</section>
+
+<h2 class="section-title">🔥 Featured Deals</h2>
 
 <section class="products">
 
-    <div class="card">
-        https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500
-        <h3>Laptop</h3>
-        <p>R 12,999</p>
-        <button>Add to Cart</button>
-    </div>
+<div class="product">
+https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1200
+<div class="product-info">
+<h3>Premium Smartphone</h3>
+<div class="price">
+<span class="new-price">R8 999</span>
+<span class="old-price">R10 999</span>
+</div>
+<div class="rating">⭐⭐⭐⭐⭐</div>
+<button>Add To Cart</button>
+</div>
+</div>
 
-    <div class="card">
-        https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500
-        <h3>Smartphone</h3>
-        <p>R 8,499</p>
-        <button>Add to Cart</button>
-    </div>
+<div class="product">
+https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=1200
+<div class="product-info">
+<h3>Gaming Laptop</h3>
+<div class="price">
+<span class="new-price">R19 999</span>
+<span class="old-price">R22 999</span>
+</div>
+<div class="rating">⭐⭐⭐⭐⭐</div>
+<button>Add To Cart</button>
+</div>
+</div>
 
-    <div class="card">
-        https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500
-        <h3>Headset</h3>
-        <p>R 799</p>
-        <button>Add to Cart</button>
-    </div>
+<div class="product">
+https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200
+<div class="product-info">
+<h3>Wireless Headphones</h3>
+<div class="price">
+<span class="new-price">R1 299</span>
+<span class="old-price">R1 799</span>
+</div>
+<div class="rating">⭐⭐⭐⭐⭐</div>
+<button>Add To Cart</button>
+</div>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1541807084-5c52b6b&w=1200
+<div class="product-info">
+<h3>Smart Watch</h3>
+<div class="price">
+<span class="new-price">R2 499</span>
+<span class="old-price">R3 299</span>
+</div>
+<div class="rating">⭐⭐⭐⭐⭐</div>
+<button>Add To Cart</button>
+</div>
+</div>
+
+</section>
+
+<section class="newsletter">
+
+<h2>Get Exclusive Deals</h2>
+<p>Subscribe for offers, discounts and product launches.</p>
+
+<div style="margin-top:20px">
+<input type="email" placeholder="Enter your email">
+<button>Subscribe</button>
+</div>
 
 </section>
 
 <footer>
-    <p>© 2026 VeloTech</p>
+
+<div class="footer-grid">
+
+<div>
+<h3>VeloTech</h3>
+<p>Your trusted online electronics marketplace.</p>
+</div>
+
+<div>
+<h3>Quick Links</h3>
+#Home</a>
+#Products</a>
+<a href/a>
+#Contact</a>
+</div>
+
+<div>
+<h3>Support</h3>
+<a href="#">Returnsing</a>
+#FAQ</a>
+</div>
+
+<div>
+<h3>Contact</h3>
+<p>support@velotech.co.za</p>
+<p>Mahikeng, South Africa</p>
+</div>
+
+</div>
+
+<div class="copyright">
+© 2026 VeloTech Marketplace
+</div>
+
 </footer>
 
 </body>
