@@ -171,7 +171,7 @@ nav a:hover{ text-shadow:0 0 10px white; }
 
 .category{
   background:var(--bg-card);
-  padding:30px;
+  padding:20px;
   text-align:center;
   border-radius:15px;
   border:1px solid var(--border);
@@ -189,14 +189,14 @@ nav a:hover{ text-shadow:0 0 10px white; }
 
 /* Category SVG icons */
 .category svg{
-  width:60px;
-  height:60px;
+  width:32px;
+  height:32px;
   display:block;
-  margin:0 auto 15px;
-  padding:10px;
+  margin:0 auto 10px;
+  padding:8px;
   border-radius:50%;
   color:var(--accent);
-  filter:drop-shadow(0 0 10px var(--accent-glow));
+  filter:drop-shadow(0 0 8px var(--accent-glow));
   transition:.3s;
 }
 
