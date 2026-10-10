@@ -5,10 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VeloTech Marketplace</title>
 
-https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -22,7 +21,6 @@ color:#222;
 }
 
 /* HEADER */
-
 header{
 background:white;
 padding:15px 40px;
@@ -70,7 +68,6 @@ font-size:24px;
 }
 
 /* NAVIGATION */
-
 nav{
 background:#0086ff;
 padding:12px;
@@ -86,7 +83,6 @@ font-weight:500;
 }
 
 /* HERO */
-
 .hero{
 height:500px;
 background:
@@ -121,7 +117,6 @@ cursor:pointer;
 }
 
 /* CATEGORIES */
-
 .section-title{
 padding:40px;
 font-size:32px;
@@ -157,7 +152,6 @@ margin-bottom:10px;
 }
 
 /* PRODUCTS */
-
 .products{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -223,7 +217,6 @@ cursor:pointer;
 }
 
 /* NEWSLETTER */
-
 .newsletter{
 background:#0c1c36;
 padding:70px 20px;
@@ -256,7 +249,6 @@ cursor:pointer;
 }
 
 /* FOOTER */
-
 footer{
 background:#111827;
 color:white;
@@ -289,60 +281,48 @@ color:#aaa;
 }
 
 @media(max-width:768px){
-
 header{
 flex-direction:column;
 gap:15px;
 }
-
 .search{
 width:100%;
 }
-
 .hero{
 padding:30px;
 height:400px;
 }
-
 .hero-content h1{
 font-size:38px;
 }
-
 nav{
 flex-wrap:wrap;
 }
-
 }
-
 </style>
 </head>
 
 <body>
 
 <header>
-
 <div class="logo">VeloTech</div>
-
 <div class="search">
 <input type="text" placeholder="Search products...">
 <button>Search</button>
 </div>
-
 <div class="icons">
 <span>❤️</span>
 <span>🛒</span>
 <span>👤</span>
 </div>
-
 </header>
 
 <nav>
-#Deals</a>
-#Electronics</a>
-<a href</a>
-<a hrefers</a>
-#Phones</a>
-<a hrefories</a>
+<a href="#deals">Deals</a>
+<a href="#electronics">Electronics</a>
+<a href="#laptops">Laptops</a>
+<a href="#phones">Phones</a>
+<a href="#accessories">Accessories</a>
 </nav>
 
 <section class="hero">
@@ -356,32 +336,11 @@ flex-wrap:wrap;
 <h2 class="section-title">Shop By Category</h2>
 
 <section class="categories">
-
-<div class="category">
-<span>📱</span>
-<h3>Phones</h3>
-</div>
-
-<div class="category">
-<span>💻</span>
-<h3>Laptops</h3>
-</div>
-
-<div class="category">
-<span>🎮</span>
-<h3>Gaming</h3>
-</div>
-
-<div class="category">
-<span>🎧</span>
-<h3>Audio</h3>
-</div>
-
-<div class="category">
-<span>⌚</span>
-<h3>Wearables</h3>
-</div>
-
+<div class="category"><span>📱</span><h3>Phones</h3></div>
+<div class="category"><span>💻</span><h3>Laptops</h3></div>
+<div class="category"><span>🎮</span><h3>Gaming</h3></div>
+<div class="category"><span>🎧</span><h3>Audio</h3></div>
+<div class="category"><span>⌚</span><h3>Wearables</h3></div>
 </section>
 
 <h2 class="section-title">🔥 Featured Deals</h2>
@@ -389,7 +348,7 @@ flex-wrap:wrap;
 <section class="products">
 
 <div class="product">
-https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1200
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1200" alt="Smartphone">
 <div class="product-info">
 <h3>Premium Smartphone</h3>
 <div class="price">
@@ -397,12 +356,12 @@ https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1200
 <span class="old-price">R10 999</span>
 </div>
 <div class="rating">⭐⭐⭐⭐⭐</div>
-<button>Add To Cart</button>
+<button class="add-cart">Add To Cart</button>
 </div>
 </div>
 
 <div class="product">
-https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=1200
+<img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=1200" alt="Gaming Laptop">
 <div class="product-info">
 <h3>Gaming Laptop</h3>
 <div class="price">
@@ -410,12 +369,12 @@ https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=1200
 <span class="old-price">R22 999</span>
 </div>
 <div class="rating">⭐⭐⭐⭐⭐</div>
-<button>Add To Cart</button>
+<button class="add-cart">Add To Cart</button>
 </div>
 </div>
 
 <div class="product">
-https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200
+<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200" alt="Wireless Headphones">
 <div class="product-info">
 <h3>Wireless Headphones</h3>
 <div class="price">
@@ -423,12 +382,12 @@ https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200
 <span class="old-price">R1 799</span>
 </div>
 <div class="rating">⭐⭐⭐⭐⭐</div>
-<button>Add To Cart</button>
+<button class="add-cart">Add To Cart</button>
 </div>
 </div>
 
 <div class="product">
-<img src="https://images.unsplash.com/photo-1541807084-5c52b6b&w=1200
+<img src="https://images.unsplash.com/photo-1541807084-5c52b6b71c9b?q=80&w=1200" alt="Smart Watch">
 <div class="product-info">
 <h3>Smart Watch</h3>
 <div class="price">
@@ -436,26 +395,22 @@ https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200
 <span class="old-price">R3 299</span>
 </div>
 <div class="rating">⭐⭐⭐⭐⭐</div>
-<button>Add To Cart</button>
+<button class="add-cart">Add To Cart</button>
 </div>
 </div>
 
 </section>
 
 <section class="newsletter">
-
 <h2>Get Exclusive Deals</h2>
 <p>Subscribe for offers, discounts and product launches.</p>
-
 <div style="margin-top:20px">
 <input type="email" placeholder="Enter your email">
 <button>Subscribe</button>
 </div>
-
 </section>
 
 <footer>
-
 <div class="footer-grid">
 
 <div>
@@ -465,16 +420,17 @@ https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200
 
 <div>
 <h3>Quick Links</h3>
-#Home</a>
-#Products</a>
-<a href/a>
-#Contact</a>
+<a href="#home">Home</a>
+<a href="#products">Products</a>
+<a href="#deals">Deals</a>
+<a href="#contact">Contact</a>
 </div>
 
 <div>
 <h3>Support</h3>
-<a href="#">Returnsing</a>
-#FAQ</a>
+<a href="#returns">Returns</a>
+<a href="#shipping">Shipping</a>
+<a href="#faq">FAQ</a>
 </div>
 
 <div>
@@ -488,8 +444,16 @@ https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200
 <div class="copyright">
 © 2026 VeloTech Marketplace
 </div>
-
 </footer>
+
+<script>
+document.querySelectorAll(".add-cart").forEach(button => {
+  button.addEventListener("click", () => {
+    const productName = button.closest(".product").querySelector("h3").innerText;
+    alert(productName + " added to cart!");
+  });
+});
+</script>
 
 </body>
 </html>
