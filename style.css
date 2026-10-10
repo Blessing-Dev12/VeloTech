@@ -187,7 +187,25 @@ nav a:hover{ text-shadow:0 0 10px white; }
   color:white;
 }
 
-.category span{ font-size:50px; display:block; margin-bottom:10px; }
+/* Category SVG icons */
+.category svg{
+  width:60px;
+  height:60px;
+  display:block;
+  margin:0 auto 15px;
+  padding:10px;
+  border-radius:50%;
+  color:var(--accent);
+  filter:drop-shadow(0 0 10px var(--accent-glow));
+  transition:.3s;
+}
+
+.category:hover svg{
+  color:white;
+  background:rgba(0,200,255,.15);
+  transform:scale(1.15) rotate(-4deg);
+  filter:drop-shadow(0 0 18px var(--accent));
+}
 
 /* ===== PRODUCTS ===== */
 .products{
