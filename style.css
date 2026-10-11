@@ -897,13 +897,5 @@ footer::before{
   .page-banner h1{
     font-size:32px;
   }
-  /* ===== DESKTOP HEADER FIX ===== */
-header{
-  padding:14px 40px;
-  min-height:70px;
-}
-
-nav{
-  padding:14px 40px;
-}
+ 
 }
