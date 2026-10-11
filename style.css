@@ -30,7 +30,6 @@ body{
   overflow-x:hidden;
 }
 
-/* Animated top-to-bottom sheen */
 body::before{
   content:"";
   position:fixed;
@@ -81,13 +80,13 @@ header{
 }
 
 .logo-img{
-  height:45px;        /* <--- THIS CONTROLS THE SIZE */
+  height:45px;
   width:auto;
   display:block;
   filter:drop-shadow(0 0 12px rgba(0,200,255,.6));
   animation:logo-pulse 3s ease-in-out infinite;
   transition:transform .4s cubic-bezier(.2,.8,.2,1);
-  mix-blend-mode: screen; /* <--- Makes the black background invisible on dark headers */
+  mix-blend-mode:screen;
 }
 
 @keyframes logo-pulse{
@@ -99,6 +98,7 @@ header{
   transform:scale(1.15);
   filter:drop-shadow(0 0 30px #00eaff);
 }
+
 .search{ display:flex; width:50%; }
 
 .search input{
@@ -193,7 +193,6 @@ nav a:hover::after{
   overflow:hidden;
 }
 
-/* animated scan lines */
 .hero::after{
   content:"";
   position:absolute;
@@ -627,14 +626,7 @@ footer::before{
   font-size:14px;
 }
 
-/* ===== MOBILE ===== */
-@media(max-width:768px){
-  header{ flex-direction:column; gap:15px; }
-  .search{ width:100%; }
-  .hero{ padding:30px; height:400px; }
-  .hero-content h1{ font-size:38px; }
-  nav{ flex-wrap:wrap; }
-  /* ===== CATEGORY LINK WRAPPER ===== */
+/* ===== CATEGORY LINK WRAPPER ===== */
 .category-link{
   text-decoration:none;
   color:inherit;
@@ -799,7 +791,6 @@ footer::before{
   box-shadow:0 15px 40px var(--accent-glow);
 }
 
-/* Specs + Features */
 .detail-sections{
   margin-top:60px;
   display:grid;
@@ -876,7 +867,7 @@ footer::before{
   margin-top:20px;
 }
 
-/* ===== MOBILE FIXES ===== */
+/* ===== TABLET / MOBILE FIXES ===== */
 @media(max-width:900px){
   .detail-grid{
     grid-template-columns:1fr;
@@ -897,5 +888,74 @@ footer::before{
   .page-banner h1{
     font-size:32px;
   }
- 
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+  header{
+    flex-direction:column;
+    gap:15px;
+    padding:15px 20px;
+  }
+  .search{ width:100%; }
+  .hero{
+    padding:30px;
+    height:400px;
+  }
+  .hero-content h1{ font-size:38px; }
+
+  /* Horizontal scrolling nav on mobile */
+  nav{
+    justify-content:flex-start;
+    overflow-x:auto;
+    white-space:nowrap;
+    padding:12px 20px;
+    gap:20px;
+  }
+  nav a{
+    font-size:14px;
+    flex-shrink:0;
+  }
+
+  /* Filter bar wraps nicer */
+  .filter-bar{
+    padding:0 20px 20px;
+  }
+  .filter-btn{
+    padding:8px 16px;
+    font-size:13px;
+  }
+
+  /* Page banner shrinks */
+  .page-banner{
+    padding:40px 20px;
+  }
+
+  /* Section titles shrink */
+  .section-title{
+    padding:30px 20px;
+    font-size:26px;
+  }
+
+  /* Products + categories padding */
+  .products,
+  .categories{
+    padding-left:20px;
+    padding-right:20px;
+  }
+
+  /* Product detail padding */
+  .product-detail{
+    padding:20px 20px 60px;
+  }
+
+  /* Footer padding */
+  footer{
+    padding:30px 20px;
+  }
+
+  /* Breadcrumb */
+  .breadcrumb{
+    padding:15px 20px;
+  }
 }
