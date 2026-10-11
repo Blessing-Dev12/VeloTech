@@ -72,28 +72,33 @@ header{
   z-index:1000;
 }
 
+/* ----- LOGO ----- */
 .logo{
-  font-size:30px;
-  font-weight:700;
-  color:var(--accent);
-  text-shadow:0 0 18px var(--accent-glow);
-  letter-spacing:.5px;
-  position:relative;
-}
-.logo::after{
-  content:"";
-  position:absolute;
-  inset:-6px -12px;
-  border-radius:10px;
-  background:radial-gradient(circle, rgba(0,200,255,.18), transparent 70%);
-  z-index:-1;
-  animation:logo-glow 3s ease-in-out infinite;
-}
-@keyframes logo-glow{
-  0%,100%{ opacity:.6; }
-  50%    { opacity:1; }
+  display:flex;
+  align-items:center;
+  cursor:pointer;
+  transition:.3s;
 }
 
+.logo-img{
+  height:45px;        /* <--- THIS CONTROLS THE SIZE */
+  width:auto;
+  display:block;
+  filter:drop-shadow(0 0 12px rgba(0,200,255,.6));
+  animation:logo-pulse 3s ease-in-out infinite;
+  transition:transform .4s cubic-bezier(.2,.8,.2,1);
+  mix-blend-mode: screen; /* <--- Makes the black background invisible on dark headers */
+}
+
+@keyframes logo-pulse{
+  0%,100%{ filter:drop-shadow(0 0 8px rgba(0,200,255,.4)); }
+  50%    { filter:drop-shadow(0 0 22px rgba(0,200,255,.9)); }
+}
+
+.logo:hover .logo-img{
+  transform:scale(1.15);
+  filter:drop-shadow(0 0 30px #00eaff);
+}
 .search{ display:flex; width:50%; }
 
 .search input{
