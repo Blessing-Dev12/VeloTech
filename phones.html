@@ -43,18 +43,105 @@
 </div>
 
 <h2 class="section-title reveal">All Phones</h2>
+<div class="shop-layout">
 
-<div class="filter-bar">
-  <button class="filter-btn active" data-filter="all">All</button>
-  <button class="filter-btn" data-filter="apple">Apple</button>
-  <button class="filter-btn" data-filter="samsung">Samsung</button>
-  <button class="filter-btn" data-filter="google">Google</button>
-  <button class="filter-btn" data-filter="other">Other</button>
+  <!-- ============ SIDEBAR FILTERS ============ -->
+  <aside class="filter-sidebar" id="filterSidebar">
+
+    <div class="filter-header">
+      <h2>⚙️ Filters</h2>
+      <button class="filter-reset" id="filterReset">↺ Reset</button>
+    </div>
+
+    <!-- Active filter tags -->
+    <div class="active-filters" id="activeFilters"></div>
+
+    <!-- Price Range -->
+    <div class="filter-block">
+      <h3>💰 Price Range</h3>
+      <div class="price-values">
+        <span id="priceMinLabel">R0</span>
+        <span id="priceMaxLabel">R50 000</span>
+      </div>
+      <input type="range" id="priceMin" min="0" max="50000" value="0" step="500">
+      <input type="range" id="priceMax" min="0" max="50000" value="50000" step="500">
+    </div>
+
+    <!-- Brand -->
+    <div class="filter-block">
+      <h3>🏷️ Brand</h3>
+      <label class="check-row">
+        <input type="checkbox" class="brand-filter" value="apple">
+        <span>Apple</span>
+        <span class="count" data-brand="apple">0</span>
+      </label>
+      <label class="check-row">
+        <input type="checkbox" class="brand-filter" value="samsung">
+        <span>Samsung</span>
+        <span class="count" data-brand="samsung">0</span>
+      </label>
+      <label class="check-row">
+        <input type="checkbox" class="brand-filter" value="google">
+        <span>Google</span>
+        <span class="count" data-brand="google">0</span>
+      </label>
+      <label class="check-row">
+        <input type="checkbox" class="brand-filter" value="other">
+        <span>Other Brands</span>
+        <span class="count" data-brand="other">0</span>
+      </label>
+    </div>
+
+    <!-- Rating -->
+    <div class="filter-block">
+      <h3>⭐ Minimum Rating</h3>
+      <label class="check-row">
+        <input type="radio" name="ratingFilter" value="0" checked>
+        <span>All</span>
+      </label>
+      <label class="check-row">
+        <input type="radio" name="ratingFilter" value="4">
+        <span>4★ & up</span>
+      </label>
+      <label class="check-row">
+        <input type="radio" name="ratingFilter" value="4.5">
+        <span>4.5★ & up</span>
+      </label>
+      <label class="check-row">
+        <input type="radio" name="ratingFilter" value="4.8">
+        <span>4.8★ & up</span>
+      </label>
+    </div>
+
+    <!-- Sort -->
+    <div class="filter-block">
+      <h3>🔀 Sort By</h3>
+      <select id="sortSelect" class="sort-select">
+        <option value="default">Default</option>
+        <option value="price-low">Price: Low to High</option>
+        <option value="price-high">Price: High to Low</option>
+        <option value="rating">Highest Rated</option>
+        <option value="name">Name (A-Z)</option>
+      </select>
+    </div>
+
+  </aside>
+
+  <!-- ============ PRODUCT GRID ============ -->
+  <div class="shop-main">
+    <div class="shop-toolbar">
+      <span id="resultsCount">Showing all phones</span>
+      <button class="filter-toggle" id="filterToggle">⚙️ Filters</button>
+    </div>
+
+    <section class="products" id="phoneGrid">
+      <!-- Phones injected by JavaScript -->
+    </section>
+  </div>
+
 </div>
 
-<section class="products reveal" id="phoneGrid">
   <!-- Phones injected by JavaScript -->
-</section>
 <!-- ===== SHOPPING CART DRAWER ===== -->
 <div class="cart-overlay" id="cartOverlay"></div>
 
