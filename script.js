@@ -230,3 +230,35 @@ attachAddToCartButtons();
 // (phones.js will also call attachAddToCartButtons)
 window.attachAddToCartButtons = attachAddToCartButtons;
 
+/* ============================================
+   TABS + ACCORDION
+   ============================================ */
+
+// -------- TAB SWITCHING --------
+document.querySelectorAll(".tab-pill").forEach(pill => {
+  pill.addEventListener("click", () => {
+    // Deactivate all pills + panels
+    document.querySelectorAll(".tab-pill").forEach(p => p.classList.remove("active"));
+    document.querySelectorAll(".tab-panel").forEach(p => p.classList.remove("active"));
+
+    // Activate clicked
+    pill.classList.add("active");
+    document.getElementById(pill.dataset.target).classList.add("active");
+  });
+});
+
+// -------- ACCORDION --------
+document.querySelectorAll(".accordion-header").forEach(header => {
+  header.addEventListener("click", () => {
+    const item = header.parentElement;
+    const wasOpen = item.classList.contains("open");
+
+    // Close all others in the same accordion
+    item.parentElement.querySelectorAll(".accordion-item").forEach(i => {
+      i.classList.remove("open");
+    });
+
+    // Toggle this one
+    if (!wasOpen) item.classList.add("open");
+  });
+});
