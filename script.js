@@ -143,9 +143,7 @@ if (cartCheckout) {
       alert("Your cart is empty!");
       return;
     }
-    const total = cart.reduce((sum, i) => sum + i.price * i.qty, 0);
-    alert("Checkout total: R" + total.toLocaleString() +
-          "\n\nReal payment coming soon 🚀");
+    window.location.href = "checkout.html";
   });
 }
 
