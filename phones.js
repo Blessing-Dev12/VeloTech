@@ -78,3 +78,7 @@ if (searchInput) {
 
 // Initial render
 renderPhones();
+// Re-bind add-to-cart buttons after render
+if (window.attachAddToCartButtons) {
+  setTimeout(() => window.attachAddToCartButtons(), 100);
+}
