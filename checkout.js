@@ -179,43 +179,5 @@ if (currentUser) {
   if (lastName  && nameParts[1]) lastName.value  = nameParts.slice(1).join(" ");
   if (email     && currentUser.email) email.value = currentUser.email;
 }
-
-// -------- PRE-FILL USER INFO --------
-const currentUser = JSON.parse(localStorage.getItem("velotech-current-user"));
-if (currentUser) {
-  const nameParts = (currentUser.name || "").split(" ");
-  const firstName = document.getElementById("firstName");
-  const lastName  = document.getElementById("lastName");
-  const email     = document.getElementById("email");
-
-  if (firstName && nameParts[0]) firstName.value = nameParts[0];
-  if (lastName  && nameParts[1]) lastName.value  = nameParts.slice(1).join(" ");
-  if (email     && currentUser.email) email.value = currentUser.email;
-}
-
-// -------- PRE-FILL USER INFO --------
-const currentUser = JSON.parse(localStorage.getItem("velotech-current-user"));
-if (currentUser) {
-  const nameParts = (currentUser.name || "").split(" ");
-  const firstName = document.getElementById("firstName");
-  const lastName  = document.getElementById("lastName");
-  const email     = document.getElementById("email");
-
-  if (firstName && nameParts[0]) firstName.value = nameParts[0];
-  if (lastName  && nameParts[1]) lastName.value  = nameParts.slice(1).join(" ");
-  if (email     && currentUser.email) email.value = currentUser.email;
-}
-// -------- PRE-FILL USER INFO --------
-const currentUser = JSON.parse(localStorage.getItem("velotech-current-user"));
-if (currentUser) {
-  const nameParts = (currentUser.name || "").split(" ");
-  const firstName = document.getElementById("firstName");
-  const lastName  = document.getElementById("lastName");
-  const email     = document.getElementById("email");
-
-  if (firstName && nameParts[0]) firstName.value = nameParts[0];
-  if (lastName  && nameParts[1]) lastName.value  = nameParts.slice(1).join(" ");
-  if (email     && currentUser.email) email.value = currentUser.email;
-}
 // -------- INIT --------
 renderSummary();
