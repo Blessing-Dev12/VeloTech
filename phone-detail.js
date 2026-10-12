@@ -75,3 +75,7 @@ if (!phone) {
     });
   });
 }
+// Re-bind add-to-cart buttons after detail page renders
+if (window.attachAddToCartButtons) {
+  setTimeout(() => window.attachAddToCartButtons(), 100);
+}
