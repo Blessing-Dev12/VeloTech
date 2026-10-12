@@ -143,6 +143,13 @@ if (cartCheckout) {
       alert("Your cart is empty!");
       return;
     }
+         // Check if user is logged in
+    const currentUser = JSON.parse(localStorage.getItem("velotech-current-user"));
+
+    if (!currentUser) {
+      // Send to login page, tell it to come back to checkout after
+      window.location.href = "login.html?redirect=checkout";
+    } else {
     window.location.href = "checkout.html";
   });
 }
