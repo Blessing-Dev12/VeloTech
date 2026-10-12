@@ -143,6 +143,7 @@ if (cartCheckout) {
       alert("Your cart is empty!");
       return;
     }
+      window.location.href = "checkout.html";
   });
 }
 
