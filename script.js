@@ -228,25 +228,4 @@ attachAddToCartButtons();
 // Re-attach buttons after phones.js renders its grid
 // (phones.js will also call attachAddToCartButtons)
 window.attachAddToCartButtons = attachAddToCartButtons;
-// -------- USER ICON --------
-const userIcon = document.getElementById("userIcon");
-if (userIcon) {
-  const user = JSON.parse(localStorage.getItem("velotech-current-user"));
 
-  if (user) {
-    userIcon.title = "Logged in as " + user.name + " (click to log out)";
-    userIcon.textContent = "👤✓";
-
-    userIcon.addEventListener("click", () => {
-      if (confirm("Log out of VeloTech?")) {
-        localStorage.removeItem("velotech-current-user");
-        location.reload();
-      }
-    });
-  } else {
-    userIcon.title = "Sign in";
-    userIcon.addEventListener("click", () => {
-      window.location.href = "login.html";
-    });
-  }
-}
